@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martins & Pamplona Advocacia</title>
+  <meta name="description" content="Escritório de advocacia com atuação em Direito de Família, Previdenciário, Consumidor, Trabalhista, Imobiliário e Sucessões.">
+  <meta name="theme-color" content="#0b0b0d">
+  <link rel="icon" href="images/favicon.ico" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/panel.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="is-loading">
+
+  <!-- Tela de carregamento -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <span>MARTINS E PAMPLONA</span>
+  </div>
+
+  <!-- CABEÇALHO -->
+  <header class="header" id="header">
+    <a class="brand" href="#" data-action="areas">MARTINS & PAMPLONA<small>Consultoria Jurídica</small></a>
+
+    <nav class="nav" aria-label="Principal">
+      <a href="#" data-action="areas" class="is-active">Áreas de atuação</a>
+      <span class="sep" aria-hidden="true">|</span>
+      <a href="#sobre" data-action="about">Sobre o escritório</a>
+      <span class="sep" aria-hidden="true">|</span>
+      <a href="#contato" data-action="contact">Contato</a>
+    </nav>
+
+    <div class="header-right">
+      <a class="header-cta" href="#" data-whats target="_blank" rel="noopener">Agende sua consulta</a>
+      <span class="sep" aria-hidden="true">|</span>
+      <a class="icon-btn" href="#" data-whats target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>
+      </a>
+      <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ABA SOCIAL (canto esquerdo) -->
+  <aside class="social" aria-label="Redes sociais">
+    <!-- Troque os href pelos seus perfis -->
+    <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+    </a>
+    <a href="https://linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4v11H3zM10 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V20.5h-4v-4.9c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6v5H10z"/></svg>
+    </a>
+    <a href="#" data-whats target="_blank" rel="noopener" aria-label="WhatsApp">
+      <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21l1.7-5A8.5 8.5 0 1 1 8 19.3z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8a4 4 0 0 1-2-2l.8-1-1-2z" fill="currentColor" stroke="none"/></svg>
+    </a>
+  </aside>
+
+  <!-- Rótulo vertical da área atual -->
+  <div class="side-label" aria-hidden="true">
+    <i></i><span id="sideLabel">FAMÍLIA</span>
+  </div>
+
+  <!-- PALCO (HERO / SLIDER PARALLAX) -->
+  <main class="stage" id="stage">
+    <div class="zoom" id="zoom">
+      <div class="track" id="track"><!-- slides gerados por js/slider.js a partir de js/data.js --></div>
+    </div>
+
+    <!-- Contador I ——— VI -->
+    <div class="counter" aria-live="polite">
+      <button class="arrow" id="prevBtn" aria-label="Área anterior">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <span class="num" id="cntCur">I</span>
+      <span class="line"></span>
+      <span class="num total" id="cntTotal">VI</span>
+      <button class="arrow" id="nextBtn" aria-label="Próxima área">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+
+    <!-- Botão CLIQUE E SEGURE -->
+    <button class="hold" id="hold" aria-label="Segure para ver os serviços desta área (ou pressione Enter)">
+      <svg class="hold-svg" viewBox="0 0 120 120" aria-hidden="true">
+        <circle class="hold-disc" cx="60" cy="60" r="56"/>
+        <circle class="hold-ring" cx="60" cy="60" r="56"/>
+        <circle class="hold-progress" cx="60" cy="60" r="56"/>
+        <line class="hold-slash" x1="14" y1="106" x2="116" y2="4"/>
+      </svg>
+      <span class="hold-label">CLIQUE<br>E SEGURE</span>
+    </button>
+  </main>
+
+  <!-- PÁGINA BRANCA (aberta ao segurar o botão) -->
+  <section class="panel" id="panel" aria-hidden="true" aria-label="Serviços da área">
+    <div class="panel-scroll" id="panelScroll">
+
+      <!-- Preenchido por js/panel.js: título, subtítulo e cards da área -->
+      <section class="panel-area" id="areaSection"></section>
+
+      <!-- SOBRE -->
+      <section class="about" id="sobre">
+        <h2 class="panel-title reveal">O ESCRITÓRIO</h2>
+        <div class="panel-rule reveal"></div>
+        <p class="panel-sub center reveal">Atendimento direto, ético e sigiloso</p>
+
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>Escreva aqui a apresentação do escritório: história, forma de atuação e a quem você atende. Mantenha o tom sóbrio e informativo.</p>
+            <p>Este espaço aceita dois ou três parágrafos. Edite diretamente no arquivo <code>index.html</code>, seção <code>#sobre</code>.</p>
+          </div>
+          <ul class="pillars">
+            <li class="reveal"><h3>Ética</h3><p>Conduta pautada pelo Código de Ética e Disciplina da OAB.</p></li>
+            <li class="reveal"><h3>Sigilo</h3><p>Todas as informações do cliente são tratadas com absoluta confidencialidade.</p></li>
+            <li class="reveal"><h3>Proximidade</h3><p>Acompanhamento claro de cada etapa do seu caso, em linguagem simples.</p></li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- CONTATO (faixa com parallax) -->
+      <section class="contact" id="contato">
+        <div class="contact-bg"><img src="images/bg/contato.jpg" alt="" data-speed="0.12"></div>
+        <div class="contact-shade"></div>
+
+        <div class="contact-inner">
+          <div class="contact-info reveal">
+            <h2>FALE CONOSCO</h2>
+            <div class="rule-light"></div>
+            <p class="italic">Conte rapidamente o seu caso. Retornamos o mais breve possível.</p>
+            <ul>
+              <li><span>Endereço</span>Rua do Bosque, 1621 — <br>São Paulo/SP — CEP 01136-001</li>
+              <li><span>Telefone / WhatsApp</span>(11) 98509-3995</li>
+              <li><span>E-mail</span>contato@martinsepamplona.com.br</li>
+              <li><span>Atendimento</span>Segunda a sexta, das 9h às 18h</li>
+            </ul>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm" novalidate>
+            <label>Nome
+              <input type="text" name="nome" autocomplete="name" required>
+            </label>
+            <label>Assunto
+              <select name="assunto" id="assuntoSelect"><!-- opções geradas a partir de js/data.js --></select>
+            </label>
+            <label>Mensagem
+              <textarea name="mensagem" rows="3"></textarea>
+            </label>
+            <button type="submit" class="btn-light">Enviar pelo WhatsApp</button>
+            <small>Ao enviar, o WhatsApp abre com a mensagem pronta. Nenhum dado é armazenado neste site.</small>
+          </form>
+        </div>
+      </section>
+
+      <footer class="footer">
+        <span>© <span id="year">2026</span> Martins e Pamplona Advocacia · Advogado(a) Nome Sobrenome · OAB/UF 000.000</span>
+        <span>Este site tem caráter meramente informativo e não constitui oferta de serviços ou promessa de resultado.</span>
+      </footer>
+    </div>
+
+    <!-- botão fechar flutuante (mobile) -->
+    <button class="panel-close" data-close aria-label="Fechar">×</button>
+  </section>
+
+  <!-- MENU (tela cheia) -->
+  <nav class="menu" id="menu" aria-label="Menu" aria-hidden="true">
+    <ol class="menu-list" id="menuList"><!-- áreas geradas a partir de js/data.js --></ol>
+    <div class="menu-links">
+      <a href="#sobre" data-action="about">Sobre o escritório</a>
+      <a href="#contato" data-action="contact">Contato</a>
+      <a href="#" data-whats target="_blank" rel="noopener">Agende sua consulta</a>
+    </div>
+  </nav>
+
+  <script src="js/data.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/hold.js"></script>
+  <script src="js/panel.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
