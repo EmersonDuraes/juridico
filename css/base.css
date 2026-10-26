@@ -1,0 +1,39 @@
+/* ==========================================================
+   BASE — reset e regras gerais
+   ========================================================== */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--ink);
+  color: #fff;
+  font-family: var(--sans);
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;           /* o site é "preso" na tela; a rolagem acontece dentro da página branca */
+}
+
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+ul, ol { list-style: none; margin: 0; padding: 0; }
+h1, h2, h3, p { margin: 0; }
+
+:focus-visible { outline: 1px solid var(--gold); outline-offset: 3px; }
+
+/* Tela de carregamento */
+.loader {
+  position: fixed; inset: 0; z-index: 100;
+  display: grid; place-items: center;
+  background: var(--ink);
+  font-family: var(--sans); font-weight: 900; letter-spacing: .3em; font-size: .8rem;
+  transition: opacity .9s var(--ease), visibility .9s;
+}
+.loader span { animation: pulse 1.6s ease-in-out infinite; }
+body:not(.is-loading) .loader { opacity: 0; visibility: hidden; }
+@keyframes pulse { 50% { opacity: .35; } }
+
+/* Reduzir movimento (acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}

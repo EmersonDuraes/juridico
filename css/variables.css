@@ -1,0 +1,25 @@
+/* ==========================================================
+   VARIÁVEIS — cores, fontes e medidas. Mude aqui primeiro.
+   ========================================================== */
+:root {
+  /* Cores */
+  --ink: #0b0b0d;          /* preto do site */
+  --paper: #ffffff;        /* branco da página de serviços */
+  --muted: #8a8a90;        /* textos secundários */
+  --gold: #c8a96a;         /* destaque (detalhes e hover) */
+  --line-light: rgba(255, 255, 255, .38);
+  --line-dark: rgba(11, 11, 13, .35);
+
+  /* Fontes (carregadas do Google Fonts no index.html) */
+  --serif: 'Cormorant Garamond', 'Cormorant', Georgia, 'Times New Roman', serif;
+  --sans: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+
+  /* Medidas */
+  --header-h: 84px;
+  --pad: clamp(20px, 4.4vw, 76px);       /* margem lateral do cabeçalho */
+  --content-left: clamp(76px, 7.2vw, 132px); /* início do texto do hero */
+
+  /* Animações */
+  --ease: cubic-bezier(.77, 0, .18, 1);
+  --ease-out: cubic-bezier(.16, 1, .3, 1);
+}
