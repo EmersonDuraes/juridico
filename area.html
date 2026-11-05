@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Área de atuação — Martins & Pamplona Advocacia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cabecalho.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/secoes.css">
+  <link rel="stylesheet" href="css/detalhe.css">
+</head>
+<body class="pagina-detalhe">
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main class="detalhe">
+    <div class="container">
+      <nav class="migalhas" id="migalhas"></nav>
+
+      <div class="detalhe__grade">
+        <div>
+          <div class="detalhe__foto"><img id="dFoto" alt=""></div>
+          <div class="detalhe__mini" id="dMini"></div>
+        </div>
+
+        <div>
+          <h1 class="detalhe__titulo" id="dTitulo"></h1>
+          <div class="detalhe__por" id="dPor"></div>
+          <div class="detalhe__sobre"><h3 id="dSobreT"></h3><p id="dSobre"></p></div>
+          <div class="detalhe__preco" id="dPreco"></div>
+
+          <form class="agenda" id="agenda">
+            <h4 id="aTitulo"></h4>
+            <div class="agenda__linha">
+              <label><span id="aRotData"></span><input type="date" id="aData"></label>
+              <label><span id="aRotModo"></span><select id="aModo"></select></label>
+            </div>
+            <button class="btn-destaque" type="submit" id="aBtn"></button>
+            <a class="agenda__zap" id="aZap" target="_blank" rel="noopener"></a>
+          </form>
+
+          <div class="detalhe__destaque">
+            <div><b id="dDest"></b><br><small id="dDestSub"></small></div>
+          </div>
+
+          <div class="dif"><h4 id="difT"></h4><div class="dif__grade" id="difG"></div></div>
+        </div>
+      </div>
+
+      <section class="similares">
+        <h2 class="titulo-secao" id="simT"></h2>
+        <div class="grade" id="simG"></div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+  <a class="zap" id="zap" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+  <script src="js/conteudo.js"></script>
+  <script src="js/imagens.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/area.js"></script>
+</body>
+</html>

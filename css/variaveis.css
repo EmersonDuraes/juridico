@@ -1,0 +1,30 @@
+/* ==========================================================
+   VARIÁVEIS — cores, fontes e medidas do site inteiro.
+   Mude aqui para mudar a identidade visual em todo o site.
+   ========================================================== */
+:root {
+  /* Cores */
+  --cor-fundo: #f9e3d2;            /* pêssego claro do fundo da página */
+  --cor-fundo-2: #ffffff;
+  --cor-texto: #1d1822;
+  --cor-texto-suave: #6d6470;
+  --cor-destaque: #f58a07;         /* botões de ação (laranja do vídeo) */
+  --cor-escura: #14101a;           /* botão redondo da busca, cards */
+  --cor-branca: #ffffff;
+  --cor-linha: rgba(29, 24, 34, .12);
+
+  /* Gradiente por cima das fotos do hero */
+  --hero-tom-topo: rgba(32, 22, 40, .55);
+  --hero-tom-meio: rgba(240, 150, 120, .25);
+
+  /* Fontes */
+  --fonte-titulo: "Playfair Display", "Times New Roman", Georgia, serif;
+  --fonte-texto: "Outfit", "Segoe UI", Helvetica, Arial, sans-serif;
+
+  /* Medidas */
+  --largura-max: 1240px;
+  --raio-card: 18px;
+  --raio-pilula: 999px;
+  --sombra-card: 0 18px 40px -18px rgba(40, 20, 30, .45);
+  --altura-hero: 88vh;
+}

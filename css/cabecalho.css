@@ -1,0 +1,41 @@
+.cabecalho {
+  position: absolute; inset: 0 0 auto 0; z-index: 30;
+  color: #fff; padding: 22px 0;
+}
+.cabecalho__in { display: flex; align-items: center; gap: 22px; width: min(1320px, 94%); margin-inline: auto; }
+.cabecalho__logo { display: flex; align-items: center; gap: 10px; font-size: 17px; letter-spacing: .01em; white-space: nowrap; }
+.cabecalho__logo img { height: 40px; width: 40px; object-fit: contain; }
+.cabecalho__logo small { opacity: .75; font-size: 12px; display: block; margin-top: -3px; letter-spacing: .12em; text-transform: uppercase; }
+.cabecalho__sep { width: 1px; height: 26px; background: rgba(255,255,255,.45); }
+.cabecalho__menu { display: flex; gap: 30px; font-size: 13px; opacity: .92; }
+.cabecalho__menu a { position: relative; padding: 4px 0; }
+.cabecalho__menu a::after { content:""; position:absolute; left:0; bottom:0; height:1px; width:0; background:#fff; transition:.3s; }
+.cabecalho__menu a:hover::after { width: 100%; }
+.cabecalho__dir { margin-left: auto; display: flex; align-items: center; gap: 16px; font-size: 13px; }
+.cabecalho__burger {
+  display: none; width: 42px; height: 34px; border: 1px solid rgba(255,255,255,.6); border-radius: 10px;
+  align-items: center; justify-content: center; font-size: 18px;
+}
+.cabecalho__pill { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px; border: 1px solid rgba(255,255,255,.6); border-radius: 10px; }
+.cabecalho__pill i { width: 22px; height: 22px; border-radius: 50%; background: #fff; display: inline-block; }
+
+/* Variante para páginas claras (detalhe) */
+.cabecalho--claro { position: relative; color: var(--cor-texto); background: #fff; border-bottom: 1px solid var(--cor-linha); }
+.cabecalho--claro .cabecalho__sep { background: var(--cor-linha); }
+.cabecalho--claro .cabecalho__pill, .cabecalho--claro .cabecalho__burger { border-color: var(--cor-linha); }
+.cabecalho--claro .cabecalho__pill i { background: var(--cor-texto); }
+.cabecalho--claro .cabecalho__menu a::after { background: var(--cor-texto); }
+
+/* Cabeçalho fixo após rolar (index) */
+.cabecalho--fixo { position: fixed; background: rgba(20,16,26,.82); backdrop-filter: blur(12px); padding: 12px 0; animation: descer .4s ease; }
+@keyframes descer { from { transform: translateY(-100%); } to { transform: none; } }
+
+@media (max-width: 980px) {
+  .cabecalho__menu, .cabecalho__sep, .cabecalho__dir .btn-contorno { display: none; }
+  .cabecalho__burger { display: flex; }
+  .cabecalho__menu.is-open {
+    display: flex; flex-direction: column; position: absolute; top: 100%; left: 3%; right: 3%;
+    background: rgba(20,16,26,.95); padding: 20px 24px; border-radius: 16px; gap: 14px;
+  }
+  .cabecalho--claro .cabecalho__menu.is-open { background: #fff; box-shadow: 0 20px 40px rgba(0,0,0,.12); }
+}

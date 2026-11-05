@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Martins & Pamplona Advocacia</title>
+  <meta name="description" content="Martins & Pamplona Advocacia — atendimento jurídico próximo, claro e estratégico.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Estilos (um arquivo por parte do site) -->
+  <link rel="stylesheet" href="css/variaveis.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/cabecalho.css">
+  <link rel="stylesheet" href="css/hero.css">
+  <link rel="stylesheet" href="css/busca.css">
+  <link rel="stylesheet" href="css/cards.css">
+  <link rel="stylesheet" href="css/secoes.css">
+</head>
+<body>
+
+  <!-- CABEÇALHO (preenchido por js/conteudo.js) -->
+  <header class="cabecalho" id="cabecalho"></header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="inicio" aria-label="Apresentação">
+      <div class="hero__bg" id="heroBg"></div>
+      <div class="hero__tom"></div>
+
+      <h1 class="hero__titulo" id="heroTitulo"></h1>
+      <div class="hero__pontos" id="heroPontos"></div>
+
+      <div class="hero__info">
+        <div class="hero__info-txt">
+          <div class="hero__sub" id="heroSub"></div>
+          <p class="hero__txt" id="heroTxt"></p>
+        </div>
+        <div class="hero__linha"></div>
+      </div>
+
+      <div class="hero__sel">
+        <div id="heroMinis" style="display:contents"></div>
+        <div class="hero__big"><img id="heroBig" alt=""></div>
+      </div>
+
+      <!-- Barra de agendamento -->
+      <form class="busca" id="busca" autocomplete="off">
+        <label class="busca__campo"><span class="busca__ic">⚖️</span><select id="bArea" aria-label="Área do direito"></select><span class="busca__dica" id="bAreaDica"></span></label>
+        <label class="busca__campo"><span class="busca__ic">💬</span><select id="bModo" aria-label="Atendimento"></select><span class="busca__dica" id="bModoDica"></span></label>
+        <label class="busca__campo"><span class="busca__ic">📅</span><input type="date" id="bData" aria-label="Data"><span class="busca__dica" id="bDataDica"></span></label>
+        <label class="busca__campo"><span class="busca__ic">🕒</span><select id="bTurno" aria-label="Período"></select><span class="busca__dica" id="bTurnoDica"></span></label>
+        <button class="busca__ir" type="submit" aria-label="Agendar">▶</button>
+      </form>
+    </section>
+
+    <!-- ÁREAS DE ATUAÇÃO -->
+    <section class="secao areas" id="areas">
+      <div class="container">
+        <div class="areas__topo reveal">
+          <h2 class="titulo-secao" id="tituloAreas"></h2>
+          <a href="#contato" class="btn-contorno" id="verTodas"></a>
+        </div>
+        <div class="grade" id="gradeAreas"></div>
+      </div>
+    </section>
+
+    <!-- O ESCRITÓRIO -->
+    <section class="secao" id="escritorio">
+      <div class="container escritorio">
+        <div class="escritorio__txt reveal">
+          <h2 class="titulo-secao" id="escTitulo"></h2>
+          <div id="escTexto"></div>
+          <div class="escritorio__nums" id="escNums"></div>
+        </div>
+        <div class="escritorio__img reveal" data-delay="1"><img id="escImg" alt="Escritório"></div>
+      </div>
+    </section>
+
+    <!-- EQUIPE -->
+    <section class="secao" id="equipe" style="padding-top:20px">
+      <div class="container">
+        <h2 class="titulo-secao reveal" id="tituloEquipe"></h2>
+        <div class="equipe__grade" id="gradeEquipe"></div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="secao" id="contato" style="padding-top:20px">
+      <div class="container">
+        <div class="contato reveal">
+          <div>
+            <h2 id="ctTitulo"></h2>
+            <p id="ctTexto"></p>
+            <ul class="contato__lista" id="ctLista"></ul>
+          </div>
+          <form class="form" id="form">
+            <input id="fNome" aria-label="Seu nome" autocomplete="name" required>
+            <input id="fTel" type="tel" aria-label="Telefone / WhatsApp" autocomplete="tel" required>
+            <textarea id="fMsg" aria-label="Mensagem" required></textarea>
+            <button class="btn-destaque" type="submit" id="fBtn"></button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape" id="rodape"></footer>
+  <a class="zap" id="zap" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+  <!-- Scripts: conteúdo e imagens primeiro -->
+  <script src="js/conteudo.js"></script>
+  <script src="js/imagens.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/hero.js"></script>
+  <script src="js/pagina-inicial.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+/* ================= Grade de cards (áreas) ================= */
+.areas { padding-top: 34px; }
+.areas__topo { display: flex; align-items: center; justify-content: space-between; margin-bottom: 22px; }
+.grade { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+
+.card {
+  position: relative; display: block; aspect-ratio: 3 / 4; border-radius: var(--raio-card); overflow: hidden;
+  background: var(--cor-escura); box-shadow: var(--sombra-card); isolation: isolate; color: #fff;
+  transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s;
+}
+.card:hover { transform: translateY(-8px); box-shadow: 0 30px 50px -20px rgba(40,20,30,.6); }
+.card__img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: -2; transition: transform .8s; }
+.card:hover .card__img { transform: scale(1.08); }
+.card::after { content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(180deg, rgba(0,0,0,.15) 0, rgba(0,0,0,0) 30%, rgba(8,6,14,.88) 100%); }
+.card__tag { position: absolute; top: 14px; left: 14px; font-size: 11px; padding: 4px 11px; border-radius: var(--raio-pilula);
+  background: rgba(255,255,255,.28); backdrop-filter: blur(8px); }
+.card__seta { position: absolute; top: 12px; right: 12px; width: 32px; height: 32px; border-radius: 50%;
+  background: rgba(255,255,255,.28); backdrop-filter: blur(8px); display: grid; place-items: center; transition: .3s; font-size: 14px; }
+.card:hover .card__seta { background: var(--cor-destaque); transform: rotate(-45deg); }
+.card__corpo { position: absolute; left: 16px; right: 16px; bottom: 16px; }
+.card__nome { font-size: 17px; font-weight: 500; line-height: 1.2; margin-bottom: 4px; }
+.card__local { font-size: 12px; opacity: .85; display: flex; gap: 6px; align-items: center; }
+.card__linha { margin-top: 8px; font-size: 11.5px; color: #ffd08a; display: flex; align-items: center; gap: 6px; }
+.card__linha::before { content: "★"; font-size: 12px; }
+
+@media (max-width: 1000px) { .grade { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .grade { gap: 12px; } .card__nome { font-size: 15px; } .card__corpo { left: 12px; right: 12px; bottom: 12px; } }

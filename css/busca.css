@@ -1,0 +1,27 @@
+/* Barra de agendamento flutuante (pílula branca) */
+.busca {
+  position: absolute; z-index: 8; left: 50%; bottom: 8%; transform: translateX(-50%);
+  width: min(800px, 92%); background: rgba(255,255,255,.93); backdrop-filter: blur(14px);
+  border-radius: var(--raio-pilula); padding: 10px 12px 10px 16px;
+  display: flex; align-items: center; gap: 4px; box-shadow: 0 24px 50px -20px rgba(60,20,40,.5); color: var(--cor-texto);
+}
+.busca__campo { flex: 1; display: grid; grid-template-columns: 22px 1fr; column-gap: 8px; align-items: center;
+  padding: 8px 14px; border-radius: 16px; transition: background .25s; position: relative; min-width: 0; }
+.busca__campo:hover, .busca__campo:focus-within { background: rgba(245, 138, 7, .09); }
+.busca__ic { grid-row: 1 / 3; font-size: 14px; opacity: .6; text-align: center; }
+.busca__campo select, .busca__campo input {
+  appearance: none; -webkit-appearance: none; border: 0; background: transparent; font: inherit;
+  font-size: 15px; font-weight: 500; color: var(--cor-texto); padding: 0; outline: none; width: 100%; cursor: pointer; min-width: 0;
+}
+.busca__dica { font-size: 10.5px; color: var(--cor-texto-suave); line-height: 1.2; }
+.busca__ir {
+  flex: none; width: 46px; height: 46px; border-radius: 50%; background: var(--cor-escura); color: #fff;
+  display: grid; place-items: center; font-size: 14px; transition: .25s; margin-left: 4px;
+}
+.busca__ir:hover { background: var(--cor-destaque); transform: scale(1.08); }
+
+@media (max-width: 760px) {
+  .busca { border-radius: 26px; flex-wrap: wrap; padding: 10px; bottom: 4%; }
+  .busca__campo { flex: 1 1 45%; padding: 6px 8px; }
+  .busca__ir { width: 100%; border-radius: 14px; margin: 4px 0 0; height: 42px; }
+}
