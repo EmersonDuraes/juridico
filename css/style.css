@@ -574,3 +574,24 @@ h1,h2{font-size:clamp(2.2rem,5.2vw,4.4rem)}
 .brand__txt{white-space:nowrap}
 @media (max-width:1480px){.brand__txt{font-size:.92rem;letter-spacing:.14em}}
 @media (max-width:640px){.brand__txt{font-size:.78rem;letter-spacing:.1em}}
+
+/* ===== Áreas: fundo sóbrio e legível (imagem como textura, nítida só nos círculos) ===== */
+.areas{background:radial-gradient(ellipse at 72% 45%,#13275a 0%,#0a1633 45%,#050c1d 100%)}
+.areas__blur{filter:blur(34px) brightness(.34) saturate(.55) contrast(1.05);transform:scale(1.25)}
+.areas__main{opacity:.26;filter:grayscale(.6) brightness(.8) blur(2px);width:70%;
+  -webkit-mask-image:linear-gradient(90deg,transparent 0,#000 55%),linear-gradient(180deg,#000 60%,transparent 100%);
+  -webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0,#000 55%),linear-gradient(180deg,#000 60%,transparent 100%);mask-composite:intersect}
+.areas__shade{background:
+  radial-gradient(ellipse 38% 55% at 78% 48%,rgba(201,168,98,.16),transparent 70%),
+  linear-gradient(90deg,rgba(4,11,26,.94) 0%,rgba(4,11,26,.72) 40%,rgba(4,11,26,.38) 100%),
+  linear-gradient(0deg,rgba(4,11,26,.85) 0%,transparent 50%),
+  linear-gradient(180deg,rgba(4,11,26,.7) 0%,transparent 26%)}
+.areas::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;box-shadow:inset 0 0 160px 40px rgba(3,8,20,.75)}
+.orb__label{text-shadow:0 2px 14px rgba(0,0,0,.9),0 0 3px rgba(0,0,0,.8)}
+.orb__label em,.orb__label small{color:#fff}
+.orb__img{box-shadow:0 14px 40px rgba(0,0,0,.55),0 0 0 2px rgba(232,210,156,.35)}
+.orb[data-pos="0"] .orb__img{box-shadow:0 18px 50px rgba(0,0,0,.6),0 0 0 3px var(--gold-light),0 0 40px rgba(232,210,156,.25)}
+@media (max-width:920px){
+  .areas__shade{background:linear-gradient(0deg,rgba(4,11,26,.97) 6%,rgba(4,11,26,.7) 52%,rgba(4,11,26,.5) 100%)}
+  .areas__main{width:100%;opacity:.3}
+}
