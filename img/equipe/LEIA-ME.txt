@@ -1,0 +1,6 @@
+FOTOS DA EQUIPE
+Coloque aqui as fotos dos 4 advogados com estes nomes:
+  advogado-1.jpg   advogado-2.jpg   advogado-3.jpg   advogado-4.jpg
+Sugestão: foto vertical (retrato), fundo liso cinza ou azul, rosto no terço superior, mínimo 1000 px de largura.
+Enquanto a foto não existir, o site mostra uma silhueta no lugar.
+Nomes, OAB e especialidades: edite no index.html, na seção "EQUIPE JURÍDICA".
